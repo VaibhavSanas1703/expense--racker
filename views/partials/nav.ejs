@@ -1,0 +1,43 @@
+<header>
+       <nav id="navbar">
+              <div id="logo">
+                     <h1>
+                            <a href="/"
+                                   >Expenses.io
+                                   <i class="fi fi-rr-sack-dollar"></i
+                            ></a>
+                     </h1>
+              </div>
+              <% if(locals.user) { %> 
+                     <div id="navlinks">
+                     <ul>
+                            <li><a href="/">Home</a></li>
+                     </ul>
+              </div>
+               <% } else { %>
+              <div id="navlinks">
+                     <ul>
+                            <li><a href="/">Home</a></li>
+                            <li>
+                                   <a href="/user/auth/sign-up" id="nav-btn"
+                                          >Sign up</a
+                                   >
+                            </li>
+                            <li>
+                                   <a href="/user/auth/sign-in" id="nav-btn"
+                                          >Sign in</a
+                                   >
+                            </li>
+                     </ul>
+              </div>
+              <% } %>
+              <div id="menu">
+                     <i class="fi fi-rr-menu-burger"></i>
+              </div>
+              <% if(locals.user) { %>
+              <div id="profile">
+                     <p style="color: #fff;"><%= locals.user.username %> <i class="fi fi-rr-user"></i></p>
+              </div>
+              <% } %>
+       </nav>
+</header>

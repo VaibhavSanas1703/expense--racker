@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+       <head>
+              <%- include("../partials/head") %>
+              <title>Expenses.io | <%- title %></title>
+       </head>
+       <body>
+              <%- include("../partials/nav") %>
+              <main><%- body %></main>
+
+              <script defer>
+                     const menu = document.querySelector("#menu i");
+                     const navlinks = document.querySelector("#navlinks");
+                     const expenseTitle =
+                            document.querySelector("#expense-title");
+                     const expenseAmount =
+                            document.querySelector("#expense-amount");
+                     const expenseBtn = document.querySelector("#expenseBtn");
+
+                     expenseBtn.addEventListener("click", () => {
+                            if (!expenseTitle.value || !expenseTitle.value)
+                                   return alert(
+                                          "Please enter Expense Title or Expense Amount"
+                                   );
+                     })
+
+
+                     menu.addEventListener("click", () => {
+                            if (!navlinks.classList.contains("active-navbar")) {
+                                   navlinks.classList.add("active-navbar");
+                                   menu.classList.replace(
+                                          "fi fi-rr-sack-dollar",
+                                          "fi fi-rr-octagon-xmark"
+                                   );
+                            } else {
+                                   navlinks.classList.remove("active-navbar");
+                                   menu.classList.replace(
+                                          "fi fi-rr-octagon-xmark",
+                                          "fi fi-rr-sack-dollar"
+                                   );
+                            }
+                     });
+
+                     const inputs = document.querySelectorAll("input")
+                     inputs.map((input) => {
+                            input.setAttribute("autocomplete", "off")
+                     })
+              </script>
+       </body>
+</html>

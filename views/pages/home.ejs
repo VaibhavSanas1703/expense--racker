@@ -1,0 +1,52 @@
+<section id="expenses-section">
+     <div id="expenses-container">
+          <div>
+               <h2 id="expenses-header">Calculate your Expenses <i class="fi fi-rr-usd-circle"></i></h2>
+                <hr style="margin: 10px 0; border: 0; width: 100%; height: 0.5px; background: rgba(255,255,255,0.1);">
+          </div>
+          <div>
+               <form action="/expense/user/add" method="post" id="expenses-form">
+                    <div>
+                         <label for="expense-title">Expense Name <i class="fi fi-rr-tags"></i></label>
+                         <input type="text" id="expense-title" name="expenseName">
+                    </div>
+                    <div>
+                         <label for="expense-amount">Expense Amount <i class="fi fi-rr-refund-alt"></i></label>
+                         <input type="text" id="expense-amount" name="expenseAmount">
+                    </div>
+                    <div>
+                         <button type="submit" id="expenseBtn">Add Expense <i class="fi fi-rr-terms-check"></i></button>
+                    </div>
+               </form>
+          </div>
+          <% if(locals.expenses) { %>
+               <div style="margin: 10px 0 0 0;">
+               <p id="expenses-total-header">Your Total : <span style="font-weight: 900; color: oklch(76.5% 0.177 163.223);">₹<%= locals.expensesTotal.toLocaleString("en-IN")%></span></p>
+                </div>
+           <hr style="margin: 10px 0; border: 0; width: 100%; height: 0.5px; background: rgba(255,255,255,0.1);">
+          <div>
+               <p id="expenses-history-header">Your Expenses <i class="fi fi-rr-time-past"></i></p>
+          </div>
+          <% expenses.forEach(expense => { %>
+           <div id="expenses-list">
+               <div>
+                    <p><%= expense.expenseName %> <i class="fi fi-rr-tags"></i></p>
+               </div>
+               <div>
+                    <p>₹ <span style="font-weight: 500; font-size: 16px;"><%= expense.expenseAmount.toFixed(2) %></span></p>
+               </div>
+               <div>
+                    <a href="/expenses/user/delete/<%= expense._id %>"><i class="fi fi-rr-trash"></i></a>
+               </div>
+          </div>
+        <%  }) %>
+     </div>
+      <% } else { %>
+          <div>
+               <p id="expenses-history-header">Your Expenses <i class="fi fi-rr-time-past"></i></p>
+          </div>
+          <div style="width: 100%; text-align: center; margin-top: 30px;">
+               <h3 style="color: #fff; font-weight: 400;">No Expenses?</h3>
+          </div>
+       <% } %>
+</section>

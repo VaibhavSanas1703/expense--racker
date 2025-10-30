@@ -1,0 +1,383 @@
+* {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: "Readex Pro", sans-serif;
+}
+
+body {
+       background: #111;
+}
+
+a {
+       display: inline-block;
+       text-decoration: none;
+}
+
+li {
+       list-style: none;
+}
+
+i {
+       vertical-align: middle;
+}
+
+main{
+       padding-inline: 40px;
+       margin-top: 120px;
+}
+
+header {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 85px;
+       background: #151515;
+}
+
+#navbar {
+       width: 100%;
+       height: inherit;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding-inline: 40px;
+}
+
+#logo h1 a {
+       font-size: 23px;
+       color: #f1eeee;
+       font-weight: 400;
+}
+
+#logo h1 a i {
+       color: oklch(54.6% 0.245 262.881);
+}
+
+#navlinks ul {
+       display: flex;
+       gap: 15px;
+}
+
+#navlinks ul li a {
+       font-size: 18px;
+       font-weight: 300;
+       padding-inline: 20px;
+       padding-block: 12px;
+       color: #fff;
+}
+
+#nav-btn {
+       background: oklch(54.6% 0.245 262.881);
+       border-radius: 5px;
+}
+
+#menu{
+       margin-top: 15px;
+       display: none;
+}
+
+#menu i{
+       font-size: 21px;
+       color: oklch(54.6% 0.245 262.881);
+}
+
+#profile{
+       margin-top: 5px;
+}
+
+#profile p i{
+       color: oklch(54.6% 0.245 262.881);
+}
+
+/* Expenses Styling */
+
+#expenses-section {
+       width: 100%;
+       height: auto;
+       padding: 15px 10px;
+       max-width: 100%;
+       /* background: red; */
+       display: flex;
+       justify-content: center;
+       align-items: center;
+}
+
+#expenses-container {
+       width: 500px;
+       height: 100%;
+       display: flex;
+       flex-direction: column;
+       gap: 15px;
+}
+
+#expenses-header {
+       color: #fff;
+       font-weight: 400;
+}
+
+#expenses-header i {
+       vertical-align: middle;
+       color: oklch(54.6% 0.245 262.881);
+}
+
+#expenses-form {
+       width: 100%;
+       height: 100%;
+       display: flex;
+       flex-direction: column;
+       gap: 15px;
+}
+
+#expenses-form div {
+       width: 100%;
+}
+
+#expenses-form div label {
+       color: #fcfcfc;
+       font-weight: 300;
+       font-size: 17px;
+}
+
+#expenses-form div label i {
+       margin-left: 5px;
+       color: oklch(54.6% 0.245 262.881);
+       vertical-align: middle;
+}
+
+#expenses-form div input {
+       width: 100%;
+       height: 50px;
+       margin: 5px 0;
+       background: transparent;
+       outline: none;
+       border: 0.1px solid rgba(255, 255, 255, 0.1);
+       border-radius: 8px;
+       color: #fcfcfc;
+       padding: 0 15px;
+       font-size: 17px;
+       transition: border-color 0.7s;
+}
+
+#expenses-form div button i {
+       vertical-align: middle;
+}
+
+#expenses-form button {
+       text-align: center;
+       width: 100%;
+       height: 50px;
+       font-size: 18px;
+       outline: none;
+       border-radius: 8px;
+       color: #fff;
+       background: oklch(54.6% 0.245 262.881);
+       outline: none;
+       border: 0;
+       cursor: pointer;
+}
+
+#expenses-form div input:focus {
+       border-color: oklch(54.6% 0.245 262.881);
+       border-width: 2px;
+}
+
+#expenses-history-header {
+       color: #fff;
+}
+
+#expenses-history-header i {
+       color: oklch(54.6% 0.245 262.881);
+       margin-left: 5px;
+       vertical-align: middle;
+}
+
+#expenses-list {
+       width: 100%;
+       height: 100%;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       /* margin-top: 5px; */
+       background: #222;
+       padding: 18px;
+       border-radius: 10px;
+}
+
+#expenses-list div p {
+       color: #fff;
+       font-weight: 300;
+       font-size: 17px;
+}
+
+#expenses-list div a {
+       padding: 10px 15px;
+       background: oklch(63.7% 0.237 25.331);
+       color: #fff;
+       border-radius: 8px;
+       font-weight: 300;
+       font-size: 17px;
+}
+
+/* #expenses-list div a i{
+       background: oklch(63.7% 0.237 25.331);
+} */
+
+#expenses-total-header {
+       color: #fff;
+       font-size: 19px;
+}
+
+#sign-up-form {
+       width: 100%;
+       max-width: 100%;
+       height: auto;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       gap: 15px;
+}
+
+#main-form-container {
+       width: 450px;
+        max-width: 100%;
+       height: auto;
+       display: flex;
+       gap: 15px;
+       flex-direction: column;
+}
+
+#sign-up-form-main {
+       width: 100%;
+       height: auto;
+       display: flex;
+       flex-direction: column;
+       gap: 10px;
+}
+
+#sign-up-heading {
+       color: #fff;
+}
+
+#sign-up-form-main div label {
+       color: #fff;
+       font-size: 17px;
+}
+
+#sign-up-form-main div label i {
+       color: oklch(54.6% 0.245 262.881);
+       margin-left: 5px;
+}
+
+#sign-up-form-main div input {
+       width: 100%;
+       height: 50px;
+       margin: 5px 0;
+       outline: none;
+       border: 0.5px solid rgba(255, 255, 255, 0.1);
+       background: transparent;
+       border-radius: 8px;
+       color: #fff;
+       font-size: 18px;
+       padding: 0 15px;
+       transition: border-color 0.7s;
+}
+
+#sign-up-form-main div input:focus {
+       border-color: oklch(54.6% 0.245 262.881);
+       border-width: 2px;
+}
+
+#sign-up-google a {
+       width: 100%;
+       text-align: center;
+       padding: 15px 20px;
+       border: 0.5px solid rgba(255, 255, 255, 0.1);
+       border-radius: 8px;
+       color: #fff;
+       font-size: 17px;
+}
+
+#sign-up-google a img {
+       width: 20px;
+       height: 20px;
+       vertical-align: bottom;
+       margin-left: 3px;
+}
+#already-have {
+       margin: 10px 0;
+}
+
+#already-have p {
+       color: #fff;
+}
+
+#already-have p a {
+       color: #fff;
+       text-decoration: underline;
+}
+
+#sign-up-form-main div button {
+       width: 100%;
+       height: 50px;
+       font-size: 18px;
+       outline: none;
+       border: 0;
+       background: oklch(54.6% 0.245 262.881);
+       color: #fff;
+       border-radius: 8px;
+       cursor: pointer;
+}
+
+@media (max-width:768px){
+       main{
+              padding-inline: 20px;
+       }
+       #navbar{
+              padding-inline: 20px;
+       }
+       #expenses-section{
+              padding: 5px 0;
+       }
+       #expenses-list{
+              flex-direction: column;
+              justify-content: start;
+              align-items: stretch;
+              gap: 15px;
+       }
+}
+
+@media (max-width:600px){
+       #logo h1 a{
+              font-size: 18px;
+       }
+       #menu{
+              display: block;
+       }
+       #navlinks{
+              position: fixed;
+              top: 85px;
+              left: 0;
+              width: 100%;
+              height: 0;
+              background:#212121;
+              text-align: center;
+              transition: all .6s;
+              overflow: hidden;
+       }
+       #navlinks ul{
+              display: block;
+       }
+
+       #navlinks ul li{
+             margin: 10px 0;
+       }
+       #navlinks.active-navbar{
+              height: 200px;
+       }
+       #navlinks ul li a{
+              font-weight: 400;
+       }
+}
