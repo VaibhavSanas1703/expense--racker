@@ -19,7 +19,7 @@ app.use(express.static("public"))
 
 app.use("/", routes)
 
-app.listen(5000, () => {
+app.listen(process.env.PORT, () => {
     console.log(`Server Started at: 5000`)
     connectDB(process.env.MONGODB_URI)
 })
